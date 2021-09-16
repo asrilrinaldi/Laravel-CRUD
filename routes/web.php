@@ -21,9 +21,9 @@ Route::get('halo', function () {
 	return "Halo, Selamat datang di tutorial laravel www.malasngoding.com";
 });
 
-Route::get('blog', function () {
-	return view('blog');
-});
+Route::get('/blog', 'BlogController@home');
+Route::get('/blog/tentang','BlogController@tentang');
+Route::get('/blog/kontak','BlogController@kontak');
 
 Route::get('/mahasiswa', 'MahasiswaController@index');
 Route::get('/matakuliah/{nama}','MatakuliahController@index');
